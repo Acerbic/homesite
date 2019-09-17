@@ -14,7 +14,7 @@ const { className, styles } = css.resolve`
 `;
 
 export default () => (
-    <Card className={className}>
+    <Card className={className} bordered={false}>
         <style jsx>{`
             dl {
                 display: grid;
@@ -36,11 +36,11 @@ export default () => (
             <dl>
                 <dt>Languages</dt>
                 <dd>
-                    Javascript(ES6), Typescript , PHP, SQL, HTML, CSS, GraphQL
+                    JavaScript(ES6), TypeScript, PHP, SQL, HTML, CSS, GraphQL
                 </dd>
                 <dt>Libraries and frameworks</dt>
                 <dd>
-                    NextJS, ReactJS, Laravel/Lumen, VueJS, jQuery, Twitter
+                    NextJS, React, Laravel/Lumen, VueJS, jQuery, Twitter
                     Bootstrap, Ant.Design, XState, websocket.io, Prisma
                 </dd>
                 <dt>Technologies</dt>
@@ -51,7 +51,7 @@ export default () => (
                 </dd>
                 <dt>Tooling</dt>
                 <dd>
-                    Git, NodeJs, npm, yarn, Docker, composer, webpack, babel 7,
+                    git, nodeJs, npm, yarn, Docker, composer, webpack, babel 7,
                     VS Code
                 </dd>
             </dl>

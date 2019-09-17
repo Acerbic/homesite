@@ -11,7 +11,7 @@ export default () => {
         // overflowX - prevents horizontal scrollbars from gutter prop
         <Row style={{ overflowX: "hidden" }}>
             <Col>
-                <Row gutter={32}>
+                <Row gutter={32} type="flex" align="middle">
                     <Col span={8}>
                         <Nav />
                     </Col>

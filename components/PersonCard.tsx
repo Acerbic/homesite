@@ -1,5 +1,5 @@
 import React from "react";
-// import { Card } from "antd";
+import { Card, Divider } from "antd";
 
 export default () => (
     <div>
@@ -37,8 +37,12 @@ export default () => (
             </li>
         </ul>
         <p>
-            Email: gleb_varenov@mail.ru | Mob.: +7(908) 305-02-34 | Telegram:
-            @TrulyAcerbic
+            Email:{" "}
+            <a href="mailto:gleb_varenov@mail.ru">gleb_varenov@mail.ru</a>
+            <Divider type="vertical" />
+            Mob.: <a href="tel:+7(908) 305-02-34">+7(908) 305-02-34</a>
+            <Divider type="vertical" />
+            Telegram: <a href="https://t.me/TrulyAcerbic">@TrulyAcerbic</a>
         </p>
         <p>Cheboksary, Russian Federation</p>
     </div>
