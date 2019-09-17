@@ -1,5 +1,22 @@
 import React from "react";
 import { Button, List, Divider } from "antd";
+import NavLink, { NavLinkProps } from "./NavLink";
+const links: NavLinkProps[] = [
+    {
+        imageURL: "/static/GitHub-Mark-64px.png",
+        text: "GitHub",
+        href: "http://github.com/Acerbic",
+    },
+    {
+        imageURL: "/static/LI-In-Bug.png",
+        text: "LinkedIn",
+        href: "https://www.linkedin.com/in/gleb-varenov-a690b2a6/",
+    },
+    {
+        text: "Projects",
+        href: "#projects",
+    },
+];
 
 export default () => (
     <div>
@@ -8,36 +25,16 @@ export default () => (
                 padding-right: 1em;
                 border-right: dashed 2px #bcb;
             }
+            div :global(.ant-list-item) {
+                padding-left: 1em;
+            }
         `}</style>
         <List bordered={false}>
-            <List.Item>
-                <Button type="link" href="http://github.com/Acerbic">
-                    Github
-                </Button>
-            </List.Item>
-            <List.Item>
-                <Button
-                    type="link"
-                    href="https://www.linkedin.com/in/gleb-varenov-a690b2a6/"
-                >
-                    LinkedIn
-                </Button>
-            </List.Item>
-            <List.Item>
-                <Button type="link" href="#project1">
-                    -- Project 1
-                </Button>
-            </List.Item>
-            <List.Item>
-                <Button type="link" href="#project2">
-                    -- Project 2
-                </Button>
-            </List.Item>
-            <List.Item>
-                <Button type="link" href="#project3">
-                    -- Project 3
-                </Button>
-            </List.Item>
+            {links.map((link, ind) => (
+                <List.Item key={ind}>
+                    <NavLink {...link} />
+                </List.Item>
+            ))}
         </List>
     </div>
 );
