@@ -22,10 +22,10 @@ export default () => (
     <div>
         <style jsx>{`
             ul {
-                padding-left: 2em;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 list-style: none;
+                padding: 0;
             }
             li {
                 padding-top: 16px;
@@ -37,6 +37,7 @@ export default () => (
             @media print, screen and (min-width: 992px) {
                 ul {
                     display: block;
+                    padding-left: 2em;
                 }
                 li {
                     border-bottom: 1px solid #bbb;
