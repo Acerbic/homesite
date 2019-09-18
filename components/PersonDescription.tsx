@@ -42,7 +42,7 @@ export default () => (
             <dl>
                 <dt>Languages</dt>
                 <dd>
-                    JavaScript(ES6), TypeScript, PHP, SQL, HTML, CSS, GraphQL
+                    JavaScript(ES6+), TypeScript, PHP, SQL, HTML, CSS, GraphQL
                 </dd>
                 <dt>Libraries and frameworks</dt>
                 <dd>
@@ -57,7 +57,7 @@ export default () => (
                 </dd>
                 <dt>Tooling</dt>
                 <dd>
-                    git, nodeJs, npm, yarn, Docker, composer, webpack, Babel 7,
+                    git, Node.js, npm, yarn, Docker, Composer, webpack, Babel 7,
                     VS Code
                 </dd>
             </dl>
