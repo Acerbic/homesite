@@ -20,9 +20,23 @@ const NavLink = (props: NavLinkProps) => (
                 display: inline-block;
                 vertical-align: middle;
             }
+            a {
+                min-width: 150px;
+            }
+
+            @media screen and (max-width: 991px) {
+                div.img-boundary {
+                    text-align: center;
+                }
+                img {
+                    margin: 0 auto;
+                }
+            }
             span {
                 font-size: 2em;
                 vertical-align: middle;
+                display: inline-block;
+                min-width: 105px;
             }
         `}</style>
         {props.imageURL && (

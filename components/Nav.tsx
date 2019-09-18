@@ -1,5 +1,4 @@
 import React from "react";
-import { Button, List, Divider } from "antd";
 import NavLink, { NavLinkProps } from "./NavLink";
 const links: NavLinkProps[] = [
     {
@@ -12,29 +11,50 @@ const links: NavLinkProps[] = [
         text: "LinkedIn",
         href: "https://www.linkedin.com/in/gleb-varenov-a690b2a6/",
     },
-    {
+    /*    {
         text: "Projects",
         href: "#projects",
     },
+*/
 ];
 
 export default () => (
     <div>
         <style jsx>{`
-            div {
-                padding-right: 1em;
-                border-right: dashed 2px #bcb;
+            ul {
+                padding-left: 2em;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                list-style: none;
             }
-            div :global(.ant-list-item) {
-                padding-left: 1em;
+            li {
+                padding-top: 16px;
+                padding-bottom: 16px;
+                text-align: center;
+            }
+
+            /* ant design "lg" breakpoint */
+            @media print, screen and (min-width: 992px) {
+                ul {
+                    display: block;
+                }
+                li {
+                    border-bottom: 1px solid #bbb;
+                    margin-right: 0;
+                    text-align: left;
+                }
+
+                li:last-child {
+                    border-bottom: none;
+                }
             }
         `}</style>
-        <List bordered={false}>
+        <ul>
             {links.map((link, ind) => (
-                <List.Item key={ind}>
+                <li key={ind}>
                     <NavLink {...link} />
-                </List.Item>
+                </li>
             ))}
-        </List>
+        </ul>
     </div>
 );

@@ -7,28 +7,51 @@ import PersonDescription from "../components/PersonDescription";
 import Projects from "../components/Projects";
 
 export default () => {
+    const separatorColStyle: React.CSSProperties = {
+        alignSelf: "stretch",
+        borderRight: "dashed 2px #bcb",
+    };
+
     return (
-        // overflowX - prevents horizontal scrollbars from gutter prop
-        <Row style={{ overflowX: "hidden" }}>
-            <Col>
-                <Row gutter={32} type="flex" align="middle">
-                    <Col span={8}>
+        <Row type="flex" justify="center">
+            <style jsx global>{`
+                body {
+                    background: url("/static/full-bloom.png") repeat;
+                }
+            `}</style>
+            <Col
+                style={{
+                    padding: "2em 16px",
+                    maxWidth: "1199px",
+                    background: "white",
+                    minHeight: "100vh",
+                }}
+            >
+                <Row gutter={32} type="flex" align="middle" justify="center">
+                    <Col span={24} lg={{ span: 8 }}>
                         <Nav />
                     </Col>
-                    <Col span={16}>
+                    <Col span={0} lg={{ span: 1 }} style={separatorColStyle}>
+                        <div className="divider"></div>
+                    </Col>
+                    <Col
+                        span={24}
+                        lg={{ span: 15 }}
+                        style={{ padding: "0 1em" }}
+                    >
                         <PersonCard />
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{ marginTop: "3em" }}>
                     <Col>
                         <PersonDescription />
                     </Col>
                 </Row>
-                <Row>
+                {/* <Row>
                     <Col>
                         <Projects />
                     </Col>
-                </Row>
+                </Row> */}
             </Col>
         </Row>
     );
